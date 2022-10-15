@@ -46,6 +46,7 @@ with lock:
         clist = []
         for i in range(int(nenvs)):
             clist.append(str(envprefix) + str(i))
+        print(clist)
     else:
         # load hickle file
         clist = hickle.load(file_path)
@@ -54,7 +55,8 @@ with lock:
             # append item to end of list
             # add code here
             clist.append(env)
-        else:    
+            print(clist)
+        else:
             # get and remove env from clist
             # add code here
             # return env name
